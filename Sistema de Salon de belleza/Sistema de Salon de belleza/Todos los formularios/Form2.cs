@@ -40,8 +40,8 @@ namespace Sistema_de_Salon_de_belleza
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var FormProductos = new Todos_los_formularios.FormProductos();
-            FormProductos.ShowDialog();
+            var form3 = new Todos_los_formularios.FormProductos();
+            form3.ShowDialog();
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -61,26 +61,26 @@ namespace Sistema_de_Salon_de_belleza
 
         private void button5_Click(object sender, EventArgs e)
         {
-          //  var form4 = new Todos_los_formularios.Reportes();
-           // form4.ShowDialog();
+            var form4 = new Todos_los_formularios.Reportes();
+            form4.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var form5Proveedores = new Form5Proveedores();
-                form5Proveedores.ShowDialog();
+            var form6 = new Todos_los_formularios.Proveedores();
+            form6.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var form4Clientes = new  Form4Clientes();
-            form4Clientes.ShowDialog();
+            var form5 = new Todos_los_formularios.Clientes();
+            form5.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var form6Citas = new Form6Citas();
-            form6Citas.ShowDialog();
+            var form7 = new Todos_los_formularios.Citas();
+            form7.ShowDialog();
         }
 
         private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)

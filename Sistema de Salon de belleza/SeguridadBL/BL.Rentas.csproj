@@ -40,19 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CitasBL.cs" />
-    <Compile Include="ClientesBL.cs" />
     <Compile Include="ProductosBL.cs" />
-    <Compile Include="ProveedoresBL.cs" />
     <Compile Include="SeguridadBl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\DataSources\BL.Rentas.Cliente.datasource" />
-    <None Include="Properties\DataSources\BL.Rentas.ClientesBL.datasource" />
-    <None Include="Properties\DataSources\BL.Rentas.Producto.datasource" />
-    <None Include="Properties\DataSources\BL.Rentas.ProductosBL.datasource" />
-    <None Include="Properties\DataSources\BL.Rentas.SeguridadBl.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
