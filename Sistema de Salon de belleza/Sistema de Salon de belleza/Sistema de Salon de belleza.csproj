@@ -12,22 +12,6 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
-    <PublishUrl>publicar\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -79,6 +63,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form11fac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11fac.Designer.cs">
+      <DependentUpon>Form11fac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\Form10Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\Form10Factura.Designer.cs">
+      <DependentUpon>Form10Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Todos los formularios\Form6Citas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +113,36 @@
     <Compile Include="Todos los formularios\Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Todos los formularios\Form7Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\Form7Empleados.Designer.cs">
+      <DependentUpon>Form7Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\Form8Agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\Form8Agenda.Designer.cs">
+      <DependentUpon>Form8Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\Form9Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\Form9Calendario.Designer.cs">
+      <DependentUpon>Form9Calendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Todos los formularios\Prueba.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Todos los formularios\Prueba.Designer.cs">
       <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form11fac.resx">
+      <DependentUpon>Form11fac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\Form10Factura.resx">
+      <DependentUpon>Form10Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Todos los formularios\Form6Citas.resx">
       <DependentUpon>Form6Citas.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +171,15 @@
     <EmbeddedResource Include="Todos los formularios\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\Form7Empleados.resx">
+      <DependentUpon>Form7Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\Form8Agenda.resx">
+      <DependentUpon>Form8Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\Form9Calendario.resx">
+      <DependentUpon>Form9Calendario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Todos los formularios\Prueba.resx">
       <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +191,11 @@
     <None Include="Properties\DataSources\BL.Rentas.Cliente1.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.ClientesBL1.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.EmpleadosBL+Empleados.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.EmpleadosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.Factura.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.FacturaDetalle.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.Proveedores.datasource" />
@@ -684,18 +718,6 @@
       <Project>{ea28fa95-27a9-46df-b8af-943cc769683e}</Project>
       <Name>BL.Rentas</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
